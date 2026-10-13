@@ -13,7 +13,7 @@ test('detects missing files without mistaking optional files for required files'
   assert.equal(all.valid,true);
 });
 test('parses IMG VER2 directory without loading archive data', async () => {
-  const data = new Uint8Array(8 + 32 + 2048);
+  const data = new Uint8Array(8 + 32 + 4096);
   data.set([86,69,82,50],0); new DataView(data.buffer).setUint32(4,1,true);
   const view = new DataView(data.buffer); view.setUint32(8,1,true); view.setUint16(8+6,1,true);
   data.set(new TextEncoder().encode('test.dff'),8+8);
