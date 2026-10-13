@@ -1,0 +1,12 @@
+{
+  "name": "gta-sa-web",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Unofficial, client-side San Andreas compatibility port; M1 local-asset diagnostics",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "serve": "npx --yes serve ."
+  },
+  "license": "AGPL-3.0-only"
+}

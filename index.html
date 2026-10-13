@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101720">
+  <meta name="description" content="Unofficial GTA: San Andreas browser compatibility port. Use your own local PC game files.">
+  <title>SA Web — Local asset preflight</title>
+  <link rel="stylesheet" href="./src/styles.css">
+  <script type="module" src="./src/app.js"></script>
+</head>
+<body>
+  <main class="layout">
+    <header class="topbar"><span class="brand">SA<span class="mark">/</span>WEB</span><div class="topbar-right"><span class="phase" data-i18n="phase">M1 · Проверка игровых файлов</span><button id="locale" type="button" aria-label="Switch language">EN</button></div></header>
+    <section class="hero">
+      <p class="eyebrow" data-i18n="eyebrow">НЕОФИЦИАЛЬНЫЙ БРАУЗЕРНЫЙ ПОРТ</p>
+      <h1 data-i18n="heading">San Andreas в браузере.</h1>
+      <p class="lede" data-i18n="lede">Первый этап: безопасно проверяем локальную установку оригинальной ПК-версии. Полный игровой движок ещё не подключён.</p>
+      <div class="actions"><button class="primary" id="choose" type="button" data-i18n="choose">Выбрать папку с игрой</button><label class="secondary" for="folder" data-i18n="fallback">Выбрать папку (совместимый режим)</label><input id="folder" type="file" webkitdirectory directory multiple hidden aria-label="Select installed game directory"></div>
+      <p class="privacy" data-i18n="privacy">Файлы читаются только вашим браузером. Ничего не загружается на сервер, не отправляется в GitHub и не публикуется.</p>
+    </section>
+    <section class="panel" id="results" aria-live="polite">
+      <div class="panel-heading"><h2 data-i18n="preflight">Проверка установки</h2><span id="status" class="status" data-i18n="idle">Папка ещё не выбрана</span></div>
+      <p id="summary" class="muted" data-i18n="instructions">Укажите корневую папку GTA San Andreas из вашей собственной установки (не Definitive Edition).</p>
+      <ul id="checks" class="checks"></ul>
+      <div id="archive" class="archive" hidden></div>
+      <p class="muted footnote" data-i18n="notplayable">Это диагностическая версия M1, а не готовая игра. Кнопка запуска появится после интеграции и тестирования движка.</p>
+    </section>
+    <footer><span data-i18n="legal">Независимый фанатский проект. Не связан с Rockstar Games или Take-Two.</span> <a href="https://github.com/Deenfoool/gta-sa-web" target="_blank" rel="noopener noreferrer" data-i18n="source">Исходный код</a> · <a href="./LICENSE">AGPL-3.0</a></footer>
+  </main>
+</body>
+</html>

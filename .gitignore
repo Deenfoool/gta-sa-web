@@ -1,0 +1,25 @@
+# Only user-owned original game data belong on the user's machine.
+node_modules/
+vendor/
+dist/
+game-src/
+game-data/
+static/games/
+tests/fixtures-private/
+.env*
+*.img
+*.dff
+*.txd
+*.col
+*.ifp
+*.scm
+*.gxt
+*.exe
+*.dll
+*.asi
+*.mp3
+*.wav
+*.ogg
+*.flac
+*.pak
+*.zip
